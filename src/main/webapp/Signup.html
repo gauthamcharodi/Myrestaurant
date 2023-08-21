@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="./Login.css">
+</head>
+
+<body>
+	<div id="container">
+	<form action="signup" method="post" enctype="multipart/form-data">
+		<label>Name:</label>
+		<input type="text" placeholder="name" name="Fullname"> <br> <br>
+		<label>Phone no:</label>
+		<input type="number" placeholder="phone no" name="mobile"> <br> <br>
+		<label>E-mail:</label>
+		<input type="email" placeholder="Email" name="email"> <br> <br>
+		<label>Password:</label>
+		<input type="text" placeholder="Password" name="password"> <br> <br>
+		<div>Gender: <input type="radio" name="gender" value="male">male
+			<input type="radio" name="gender" value="female">female
+		</div> <br>
+        	<tr>
+					<td><label for="dob">DOB:</label></td>
+					<td><input type="date" id="date" name="date"></td>
+				</tr>
+				<br> <br>
+		<div>country:<select name="country">
+				<option>India</option>
+				<option>Uganda</option>
+			</select>
+		</div>
+        <br>
+		<div>picture: <input type="file" name="picture"></div> <br>
+		<button id="sub">Signup</button>
+		<button id="cncl">cancel</button>
+
+		<p>already registered <a href="Login.html">Login</a></p>
+
+
+	</form>
+	</div>
+</body>
+
+</html>
