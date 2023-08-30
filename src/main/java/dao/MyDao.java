@@ -64,6 +64,13 @@ public void delete(FoodItems item) {
 	t.commit();
 	
 }
+
+public void update(FoodItems item) {
+	t.begin();
+	m.merge(item);
+	t.commit();
+
+}
 }
 
 

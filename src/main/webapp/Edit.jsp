@@ -11,7 +11,7 @@
 <body>
 <%FoodItems item=(FoodItems)request.getAttribute("item"); %>
 
-<form action="" method="post" enctype="multipart/form-data">
+<form action="update" method="post" enctype="multipart/form-data">
 	<input type="text" name="id" value="<%=item.getItem_id()%>" hidden=""><br><br>
 	Name:<input type="text" name="name" value="<%=item.getItem_name()%>"><br><br>
 	Price:<input type="text" name="price" value="<%=item.getItem_price()%>"><br><br>
