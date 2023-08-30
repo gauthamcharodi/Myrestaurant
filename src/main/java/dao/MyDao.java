@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.List;
+import dto.FoodItems;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -21,7 +22,12 @@ public class MyDao {
 	 m.persist(cust);
 	 t.commit();
  }
-
+ 
+ public void item(FoodItems items) {
+		t.begin();
+		m.persist(items);
+		t.commit();
+	}
 
 public Customer fetchByEmail(String email) {
 	
@@ -40,6 +46,22 @@ public Customer fetchByMobile(long phonenumber) {
 		return null;
 	else
 		return list.get(0);
+	
+}
+
+
+public List<FoodItems> fetchAllFooditems(){
+	  return  m.createQuery("select x from FoodItems x").getResultList();
+}
+
+public FoodItems find(int id) {
+	return m.find(FoodItems.class, id);
+}
+
+public void delete(FoodItems item) {
+	t.begin();
+	m.remove(item);
+	t.commit();
 	
 }
 }
